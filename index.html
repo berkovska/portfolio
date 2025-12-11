@@ -1,73 +1,135 @@
 <!doctype html>
 <html lang="nl-BE">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> home | Svetlana Berkovska</title>
-  
-  <link rel="stylesheet" href="css/reset.css">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>index | Svetlana Berkovska</title>
 
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="scss/styles.scss">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+  </head>
 
-</head>
 <body>
 
-<nav class="navbar navbar-expand-md">
-  <div class="container">
-    <a class="navbar-brand" href="index.html"><img src="assets/images/BS_logo_orbitron4.png" alt="BS logo"></a>
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="mainNav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-4">
-        <li class="nav-item"><a class="nav-link active"aria-current"="page" href="index.html">home</a></li>
-       <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">portfolio</a>
+  <nav class="navbar navbar-expand-md">
+     <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/BS_logo_orbitron4.png" alt="BS logo"></a>
 
-  <ul class="dropdown-menu">
+
+    <button class="navbar-toggler text " type="button"
+     data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+     aria-controls="navbarNav" aria-expanded="false" 
+     aria-label="Toggle navigation">
+      <div class="navbar-toggler-icon dropdown-item"></div>
+    </button>
+
+
+<div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-4">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="portfolio.html">home</a>
+        </li> 
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">portfolio</a>      
+    <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="project1.html">PROJECT 1</a></li>
     <li><a class="dropdown-item" href="project2.html">PROJECT 2</a></li>
     <li><a class="dropdown-item" href="project3.html">PROJECT 3</a></li>
     <li><a class="dropdown-item" href="project4.html">PROJECT 4</a></li>
     <li><a class="dropdown-item" href="project5.html">PROJECT 5</a></li>
     <li><a class="dropdown-item" href="project6.html">PROJECT 6</a></li>
-  </ul>
-
-        <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
-
-         
+   </ul>
+        <li><a class="nav-link active" aria-current="page" href="contact.html">contact</a> </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="header-strip"></div>
+
 
 <main class="section-beige">
-  <div class="container">
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-8">
-        <h2 class="mb-3 text-darkblue">Over mij</h2>
-        <p class="text-darkblue">Mijn naam is Svetlana Berkovska en ik ben een gemotiveerde junior Systeem- en Netwerkbeheerder in opleiding aan AP Hogeschool Antwerpen. Met een sterke interesse in IT-infrastructuur, netwerkbeheer en systeembeheer bouw ik stap voor stap aan mijn technische kennis en praktijkervaring. Tijdens mijn opleiding heb ik gewerkt aan diverse projecten, waaronder webdesign, netwerkarchitectuur met Cisco Packet Tracer, Linux-beheer, virtualisatie en IT-communicatie.</p>
-        <p class="text-darkblue">Ik ben leergierig, analytisch en werk graag gestructureerd. Problemen oplossen en systemen begrijpen geven mij energie, en ik zoek actief naar manieren om processen te verbeteren en nieuwe kennis toe te passen. Daarnaast vind ik communicatie en samenwerking erg belangrijk — ik kan goed samenwerken in teamverband én helder rapporteren tijdens online en fysieke meetings.</p>
-        <p class="text-darkblue">Wat mij onderscheidt is mijn passie voor technologie, mijn doorzettingsvermogen en mijn bereidheid om continu bij te leren. Ik kijk ernaar uit om mijn vaardigheden verder te ontwikkelen binnen een professionele werkomgeving, mee te bouwen aan betrouwbare IT-systemen en met enthousiasme en verantwoordelijkheid te groeien in het vak.</p>
-      </div>
+   <div class="container">
+ <div class="row g-4 align-items-start">
+       <div class="col-lg-8">
+        <h2 class="mb-3 text-darkblue">De persoon achter de projecten</h2>
+        <p class="text-darkblue">Mijn naam is Svetlana Berkovska en ik ben een gemotiveerde 
+          junior Systeem- en Netwerkbeheerder in opleiding aan AP Hogeschool Antwerpen. Met
+           een sterke interesse in IT-infrastructuur, netwerkbeheer en systeembeheer bouw ik 
+           stap voor stap aan mijn technische kennis en praktijkervaring. Tijdens mijn opleiding 
+           heb ik gewerkt aan diverse projecten, waaronder webdesign, netwerkarchitectuur met Cisco
+            Packet Tracer, Linux-beheer, virtualisatie en IT-communicatie.</p>
+        <p class="text-darkblue">Ik ben leergierig, analytisch en werk graag gestructureerd.
+           Problemen oplossen en systemen begrijpen geven mij energie, en ik zoek actief naar 
+           manieren om processen te verbeteren en nieuwe kennis toe te passen. Daarnaast vind ik 
+           communicatie en samenwerking erg belangrijk — ik kan goed samenwerken in teamverband én
+            helder rapporteren tijdens online en fysieke meetings.</p>
+        <p class="text-darkblue">Wat mij onderscheidt is mijn passie voor technologie, mijn 
+          doorzettingsvermogen en mijn bereidheid om continu bij te leren. Ik kijk ernaar uit
+           om mijn vaardigheden verder te ontwikkelen binnen een professionele werkomgeving, mee 
+           te bouwen aan betrouwbare IT-systemen en met enthousiasme en verantwoordelijkheid te groeien in het vak.</p>
 
+<br> 
+<ol class="list-group list-group-numbered text-darkblue"></ol>
+
+<header> <ol class="list-group list-group-numbered text-darkblue"></ol></header>
+
+<div></div>
+<h2 class="mb-3 text-darkblue">Specialisaties</h2>
+   <ol class="list-group list-group-numbered">
+  <li class="list-group-item">
+    <div class="fw-bold">
+      <div class="fw-bold"class="mb-3 text-darkblue">Netwerkbeheer</div>
+- Switches, routers & firewalls (bv. Cisco, MikroTik, Ubiquiti)
+    </div>
+  </li>
+
+
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold"> Systeembeheer</div>
+-Windows Server (Active Directory, Group Policy, DNS) <br>
+    </div>
+  </li>
+
+
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Security</div>  
+- Netwerkbeveiliging en segmentatie <br>
+  </li>
+
+    
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Monitoring & automatisering</div>
+- Ansible (voor config management) 
+    </div>
+  </li>
+</div>
+</ol>
+      
+
+      
  <aside class="col-lg-4 text-end">
   <img src="assets/images/SvB.jpg" alt="SvB" class="img-fluid rounded mb-3">
-
   <a href="contact.html" class="btn contact-btn w-100">
     Een vraag, opdracht of wil je samenwerken aan een project?
-    Neem gerust contact met me op via e-mailadres of via het
+    Neem gerust contact op via e-mailadres of via het
     contactformulier.
   </a>
+<br>
+  <h2> Lorem ipsum</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+     Nihil porro tempora facilis saepe asperiores, illo labore <br>
+     iste vel ducimus reprehenderit quas nisi.</p>
+        </space>
 </aside>
-
-
-
     </div>
   </div>
 </main>
@@ -75,23 +137,16 @@
 <footer>
 <div class="bottom-band">
   <div class="footer-icons d-flex gap-2">
-    <a href="#"><img src="assets/icons/c-circle.svg" alt="c-copyrights"></a>
-    <a href="#"><img src="assets/icons/phone.svg" alt="phone"></a>
-    <a href="#"><img src="assets/icons/envelope-at.svg" alt="email"></a>
-    <a href="#"><img src="assets/icons/microsoft-teams.svg" alt="teams"></a>
+    <a href=""><img src="assets/icons/c-circle.svg" alt="c-copyrights"></a>
+    <a href="tel:+32486555235"><img src="assets/icons/phone.svg" alt="phone"></a>
+    <a href="contact.html"><img src="assets/icons/envelope-at.svg" alt="email"></a>
+    <a href="https://teams.microsoft.com/"><img src="assets/icons/microsoft-teams.svg" alt="teams"></a>
   </div>
 </div>
 </footer>
 
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>
