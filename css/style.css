@@ -1,155 +1,119 @@
-:root{
-  --c-bg:#161B39;           
-  --c-fg:#DFE0D8;           
-  --c-fg-weak:none;
-  --fs-base:14pt;           
+/* simple reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+img { max-width:100%; height:auto; display:block; }
+
+/***
+    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where():not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+ {
+    all: unset;
+    display: revert;
 }
 
-
-
-html,body{height:100%;}
-
-body{
-  font-family:'Orbitron',system-ui,Arial,Helvetica,sans-serif;
-  background: url('../assets/images/Asset 2-100.jpg') center/cover no-repeat fixed;
-  color:var(--c-fg);
-  font-size:var(--fs-base);
-  line-height:1.45;
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-
-
-body {
-    background-image: url("../assets/images/Asset2-100.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
 }
 
-
-
-
-.navbar .nav-link{
-  color:var(--c-fg) !important;
-  font-weight:600;
-  letter-spacing:.5px;
-}
-.navbar .nav-link:hover,
-.navbar .nav-link:focus{color:#fff !important;}
-.navbar-brand img{ height:90px; }
-
-.header-strip{
-  background: url('../assets/images/Asset 2-100.jpg') center/cover no-repeat;
-  min-height:140px;
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
 }
 
-
-
-/* CONTENT AREA (beige block like wireframes) */
-.section-beige{
-  background:#dfe0d8; color:#161B39;
-  padding:3rem 0;
-}
-.section-beige .content-narrow{ max-width:980px; }
-
-/* Right-side image column on project pages */
-.side-image{
-  border-left:0; padding-left:0;
-}
-.side-image img{ width:100%; height:100%; object-fit:cover; }
-
-/* Bottom gradient/footer band used on your mockups */
-.bottom-band{
-  background: url('../assets/images/Asset 13-100.jpg') center/cover no-repeat;
-  min-height:90px;
-  display:flex; align-items:center; justify-content:flex-end;
-  gap:1rem; padding:0 1.25rem;
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu, summary {
+    list-style: none;
 }
 
-/* Social icon links */
-.footer-icons a{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:40px; height:40px; border-radius:8px;
-  color:var(--c-fg); border:1.5px solid var(--c-fg);
-}
-.footer-icons a:hover{ background:rgba(223,224,216,.12); }
-
-
-
-/* Small helpers */
-.text-beige{ color:var(--c-fg) !important; }
-.text-darkblue{ color:var(--c-bg) !important; }
-.bg-beige{ background:var(--c-fg) !important; }
-hr{ border-color:rgba(22,27,57,.15); }
-
-
-
-.side-image img{
-  height:100%;
-  object-fit:cover;
+/* Firefox: solve issue where nested ordered lists continue numbering from parent (https://bugzilla.mozilla.org/show_bug.cgi?id=1881517) */
+ol {
+    counter-reset: revert;
 }
 
-/* Portfolio dropdown (fix for vertical list) */
-.portfolio-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: rgba(22, 27, 57, 0.97);
-  border: 1px solid rgba(223,224,216,.2);
-  padding: 10px 15px;
-  display: none;
-  flex-direction: column;  
-  z-index: 999;
+/* For images to not be able to exceed their container */
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
 }
 
-.portfolio-dropdown a {
-  color: var(--c-fg);
-  text-decoration: none;
-  padding: 6px 0;           /* space between items */
-  white-space: nowrap;
-  display: block;           /* 🔥 forces each link on its own line */
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
 }
 
-.portfolio-dropdown a:hover {
-  color: #fff;
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+    -webkit-user-select: auto;
 }
 
-/* Mobile fix: dropdown goes full width */
-@media (max-width: 768px) {
-  .portfolio-dropdown {
-    position: static;
-    border: none;
-    background: none;
-    padding-left: 0;
-  }
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
 
-  /*Default: desktop view */
-  .phone-mobile {
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
     display: none;
-  }
-  /* Show on mobile/tablet (max 768 px  screen width) */
-  @media only screen and (max-width: 768px) {
-    .phone-desktop {
-      display: none; /* hide the phone number text */
-    }
-  }
-
-  .phone-mobile {
-    display: inline; 
-  }
 }
 
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
 
-.contact-btn {
-  background-color: #161B39 !important;
-  border-color: #161B39 !important;
-  color: white !important;
-  padding: 15px;
-  font-size: 0.9rem;
-  text-align: center;
-  display: block;
-  border-radius: 8px;
-  line-height: 1.4;
-    margin-top: 25px;
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+    display: none;
 }
